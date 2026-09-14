@@ -1,0 +1,32 @@
+# Core web framework
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+
+# Data layer
+SQLAlchemy==2.0.36
+alembic==1.14.0
+pydantic==2.10.4
+pydantic-settings==2.7.0
+
+# Knowledge ingestion
+pypdf==5.1.0
+numpy==1.26.4
+
+# HTTP client (AI providers, web ingestion)
+httpx==0.27.2
+
+# Testing
+pytest==8.3.4
+pytest-cov==6.0.0
+
+# ---------------------------------------------------------------------------
+# Optional pluggable vector backends (not required for the default local
+# index). Install only if you want to point VECTOR_BACKEND at a real server:
+#   pip install chromadb            # VECTOR_BACKEND=chroma
+#   (qdrant needs no python client - we talk to its REST API over httpx)
+# ---------------------------------------------------------------------------
+
+# Optional-but-recommended for the Coding Lab (NumPy/Pandas/scikit-learn tasks)
+pandas==2.2.3
+scikit-learn==1.5.2
