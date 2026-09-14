@@ -1,0 +1,37 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Virtual environments ---
+.venv/
+venv/
+
+# --- Runtime data (SQLite DB, uploaded files, vector store, sandbox scratch) ---
+/data/
+backend/data/
+*.db
+*.db-wal
+*.db-shm
+
+# --- Environment & secrets (keys stay in env vars only, never in git) ---
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# --- Node / frontend build output ---
+node_modules/
+frontend/dist/
+npm-debug.log*
+yarn-error.log*
+
+# --- OS / editor noise ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
