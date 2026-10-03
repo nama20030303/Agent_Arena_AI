@@ -896,6 +896,10 @@ class AICacheEntry(Base):
     expires_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
 
 
+# Game layer tables (AI Knowledge RPG) share the same metadata
+from app.game import models as _game_models  # noqa: E402,F401  (registers tables)
+
+
 def register_models() -> None:  # pragma: no cover - convenience for Alembic autogen
     _ = (User, Document, DocumentChunk, Source, Topic, Skill, SkillDependency, UserSkill,
          Question, QuestionAttempt, PracticeTask, PracticeAttempt, CodingTask, CodingAttempt,

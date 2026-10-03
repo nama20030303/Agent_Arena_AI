@@ -325,6 +325,9 @@ def seed_all(session: Session, *, index_samples: bool = True, owner_id: int | No
     stats["coding_tasks"] = _seed_coding(session)
     stats["projects"] = _seed_projects(session)
     stats["exams"] = _seed_exams(session)
+    from app.game.seed import seed_game
+
+    stats["game"] = seed_game(session)
     session.commit()
     if index_samples:
         stats["sample_documents"] = _seed_sample_documents(session, owner_id=owner_id)
